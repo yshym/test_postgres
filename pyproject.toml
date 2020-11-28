@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "test_postgres"
-version = "0.1.0"
-description = ""
+version = "0.1.1"
+description = "Context for PostgreSQL database testing"
 authors = ["Yevhen Shymotiuk <yevhenshymotiuk@gmail.com>"]
 
 repository = "https://github.com/yevhenshymotiuk/test_postgres"
