@@ -25,9 +25,12 @@ class TestPostgres:
     def disconnect(self):
         self._conn.close()
 
+    def create(self):
+        self._conn.cursor().execute(f'CREATE DATABASE "{self._db_name}"')
+
     def recreate(self):
         self.drop()
-        self._conn.cursor().execute(f'CREATE DATABASE "{self._db_name}"')
+        self.create()
 
     def drop(self, force=True):
         drop_query = f'DROP DATABASE IF EXISTS "{self._db_name}"'
